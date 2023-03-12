@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      
+
+  <title>About - Mentor Bootstrap Template</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        
+  .head .card{  
+ padding-bottom: 20px;
+ margin-left: 50px;
+ /* margin-right: 10px; */
+ border-radius: 50px;
+ box-shadow: 50px,20px,0,0;
+ border: 2px,solid rgb(4, 172, 130);
+ width: 1200px;
+
+}
+.head #img1{
+ position: absolute;
+ right: 50px;
+ top: 5px;
+ height: 140px;
+ border-radius: 200px;
+}
+.quote-icon-left,
+ .quote-icon-right {
+  color: #c3e8fa;
+  font-size: 26px;
+}
+
+ .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: static;
+}
+.quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position:static;
+  top: 10px;
+}
+#t1{
+  width: 210px;
+  color: black;
+
+}
+#c1{
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.college select{
+    width: 210px; height: 30px;
+}
+.exam{
+    position: relative;
+left: 450px;
+top: -90px;
+
+}
+.gender{
+    position: absolute;
+left: 750px;
+top: 20px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+input[type="radio"]{
+    margin:0 20px 0 20px;
+}
+
+    </style>
+</head>
+<body>
+    
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">College Predictor</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a  href="index.html">Home</a></li>
+          <li><a  href="about.html">About</a></li>
+          <li><a  href="view.html">View Colleges</a></li>
+          
+
+         
+          <li><a class="active" href="college predictor.html">College Predictor</a></li>
+          <li><a  href="rank_predict.html">Rank Predictor</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="" class="get-started-btn">Login | Sign Up</a>
+
+    </div>
+  </header><!-- End Header --> <br> <br> <br>
+
+  <div class="breadcrumbs aos-init aos-animate" data-aos="fade-in" style="margin-top:-10px">
+    <div class="container">
+      <h2>College Predictor</h2>
+    </div>
+  </div>
+
+  <br>
+  <div class="college">
+    <div class="card" style=" height: 500px;width: 1200px; margin-left: 20px;">
+        <div class="card-body">
+            <div class="course">
+              <h4>Select Course :</h4>
+        <br>
+          <select name="course" id="c1" >
+            <!-- <option value="Select Course"></option> -->
+            <option value=""></option>
+            <option value="Engineering">Engineering</option>
+            <option value="Medical">Medical</option>
+            <option value="Law">LAW</option>
+            <option value="MBA">MBA</option>
+            <option value="Hospitality">Hospitality</option>
+          </select>
+
+        </div>
+        <div class="exam">
+         <h4 >Select Exam :</h4>
+<br>
+            <select name="exam" id="e1" >
+                <option value="Select Course"></option>
+                <option value="JEE">JEE</option>
+                <option value="NEET">NEET</option>
+                <option value="CET">CET</option>
+                <option value="MBA">MBA</option>
+                <option value="Hospitality">Hospitality</option>
+              </select>
+        </div>
+        <div class="gender">
+            <h4 >Gender :</h4>
+            <br> 
+            <input type="radio" name="radio" value="Female">Female 
+            <input type="radio"name="radio" value="Male">Male 
+            <input type="radio" name="radio" value="Other">Other
+        </div>
+        <div class="rank">
+            
+        <h4 style="top: 160px; position: absolute;">  Enter Your Rank </h4>   
+                <h4 style="    position: absolute;
+                top: 160px;
+                left: 260px;">--- or ---</h4>   <h4 style="   position: absolute;
+    top: 160px;
+    left: 460px;">    Enter Your Percentile</h4>
+        <input type="text" placeholder="" id="t1" style="height: 30px; margin-top: 30px;">
+        <input type="text" placeholder="" id="t1" style="height: 30px; margin-left: 230px; margin-top: 30px;">
+
+        </div>
+       
+        <div class="category">
+            <h4 style="position: absolute; top: 160px; left: 853px;">Category :</h4>
+<select name="category" id="c1" style="position: absolute; top:230px; width: 210px; height: 30px; margin-left: 850px; ">
+  Select category
+  <option value="Select category"></option>
+  <option value="Open">OPEN</option>
+  <option value="OBC">OBC</option>
+  <option value="SBC">SBC</option>
+  <option value="SC">SC</option>
+  <option value="NTC">NTC</option>
+</select> 
+        </div>
+        <div class="state"> 
+            <h4 style="position:absolute; top: 330px;">State :</h4>
+            <select name="state" id="s1" style="width: 210px; height: 30px; position: absolute; top: 380px;">
+               <h4 style="position: absolute;top: 310px;">Select State:</h4>
+              <option value="Select State"></option>
+              <option value=""></option>JEE
+              <option value="NEET"></option>NEET
+              <option value="CET"></option>CET
+              <option value="MBA"></option>MBA
+              <option value="Hospitality"></option>Hospitality
+            </select>
+            <div class="city">
+                <h4 style="position: absolute; top: 330px; left:430px">City :</h4> 
+                <select name="city" id="c1" style=" position:absolute; width:210px; height: 30px; top:380px; left:450px;">
+                   <h4 style="position: absolute; top: 310px; ;">Select State:</h4>
+                  <option value="Select City"></option>
+                  <option value="JEE"></option>JEE
+                  <option value="NEET"></option>NEET
+                  <option value="CET"></option>CET
+                  <option value="MBA"></option>MBA
+                  <option value="Hospitality"></option>Hospitality
+                </select>
+
+            </div>
+            <button class="get-started-btn" style="position: absolute; top: 550px; 
+            border: none; left: 400px;"><b>Predict Colleges</b></button>
+        </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

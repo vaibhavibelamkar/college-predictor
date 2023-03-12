@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Popper js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<!-- login js -->
+<script src="assets/js/login.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/css/login.css" rel="stylesheet">
+  
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="npm i bootstrap-icons">
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Login here
+  </button>
+  <div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-size: 30px;">Login Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="wrapper login" >
+                <div class="container">
+                    <div class="col-left">
+                        <div class="login-text">
+                            <h1>Welcome!</h1>
+                            <p>Create your account.<br>For Free! <br><br><button class="btn" onclick="signup()">Sign Up</button> </p><!--btn bootstrap class--> 
+                        </div>
+                    </div>
+                    <div class="col-right" id="login-div">
+                        <div class="login-form"><br>
+                            <h1>LOGIN</h1>
+                            <form action="" method="post" name="form">
+                                <br><br>
+                                <p> <label>Username/Email address<span>*</span></label> 
+                                <input type="text" placeholder="Username or Email" id="uname" required > </p>
+                                <p> <label>Password<span>*</span></label> 
+                                <input type="password" id="myInput" placeholder="Password" required> </p>
+                                <!-- Toggle button -->
+                                <input class="check" type="checkbox" onclick="myFunction()" style="width: 20px; height: 15px;">
+                              <label style="position: absolute; top: 307px; left: 20px;">Show Password</label>
+                              <br><br>
+                                <p> <input type="submit" value="Sign In" onclick="validate_username()"> </p>
+                                <p> <a href="" data-toggle="modal" data-target="#forgotpasswordmodal" data-dismiss="modal">Forgot password?</a> </p>
+                                 <p>Not a member? <a href="" >Sign Up</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal" id="forgotpasswordmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-size: 20px;">Recover Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: fixed;
+          top: -5px;
+          right: -10px;
+          width: 23px;
+          height: 40px;
+          opacity: 1;
+          z-index: 10; left: 870px;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="wrapper login" >
+
+                <div class="f-container">
+
+                        <div class="login-form"><br>
+                            <form action="" method="post" name="form">
+                                <label class="f-title">To recover the password, please provide us the account details.</label>
+                                <!-- Username -->
+                                <p> <label class="f-uname">Username/Email address : <span>*</span></label> 
+                                <input class="f-uname-field" type="text" placeholder="Username or Email" id="uname" required > </p>
+                                
+                                <!-- Password -->
+                                <p> <label class="f-pass">Reset Password : <span>*</span></label> 
+                                <input class="f-pass-field" type="password" id="myInput" placeholder="Password" required> </p>
+                                <!-- Confirm password -->
+                                <p> <label class="f-confirm-pass">Confirm Password : <span>*</span></label> 
+                                <input class="f-confirm-pass-field" type="password" placeholder="Confirm Password" required> </p>
+                                <!-- Captcha -->
+                                <!-- <div class="captcha">
+                                  <label for="captcha-input">Captcha :<span>*</span></label>
+                                  <div class="captcha-form">
+                                    <div class="preview"></div>
+                                    <input type="text" id="captcha-form" placeholder="Captcha text">
+                                    <button class="captcha-refresh">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>  -->
+                            </form>
+                            
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Back To Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
